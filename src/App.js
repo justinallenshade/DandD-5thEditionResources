@@ -26,6 +26,8 @@ export default function App() {
             <Route path="/monsters" exact render={() => <Monsters url={url}/>} /> 
             <Route path="/equipment" exact render={() => <Equipment url={url}/>} />
             <Route path="/damage" exact render={() => <Damage url={url}/>} />
+            <Route path="/skills" exact render={() => <Skills url={url}/>} />
+            <Route path="/rules" exact render={() => <Rules url={url}/>} />
         </div>
     </div>
   );
