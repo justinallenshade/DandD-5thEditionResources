@@ -12,6 +12,7 @@ export default function Home({ url }) {
     })
     return (
         <div>
+            <p>Homepage</p>
             <p>{url}</p>
         </div>
     );
