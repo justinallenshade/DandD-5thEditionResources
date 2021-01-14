@@ -14,18 +14,19 @@ import Rules from './Components/Rules'
 
 export default function App() {
   let url = "https://www.dnd5eapi.co/api/"
+  
 
   return (
     <div className="App">
         <div>
             <h1>D and D 5th edition resources</h1>
             <Header />
-            <Route path="/" exact render={() => <Home url={url}/>} /> 
-            <Route path="/magic" exact render={() => <Spells url={url}/>} /> 
-            <Route path="/character" exact render={() => <Character url={url}/>} />
-            <Route path="/monsters" exact render={() => <Monsters url={url}/>} /> 
-            <Route path="/equipment" exact render={() => <Equipment url={url}/>} />
-            <Route path="/damage" exact render={() => <Damage url={url}/>} />
+            <Route path="/" exact render={() => <Home url={url} />} /> 
+            <Route path="/magic" exact render={() => <Spells url={url} />} /> 
+            <Route path="/character" exact render={() => <Character url={url} />} />
+            <Route path="/monsters" exact render={() => <Monsters url={url} />} /> 
+            <Route path="/equipment" exact render={() => <Equipment url={url} />} />
+            <Route path="/damage" exact render={() => <Damage url={url} />} />
             <Route path="/skills" exact render={() => <Skills url={url}/>} />
             <Route path="/rules" exact render={() => <Rules url={url}/>} />
         </div>

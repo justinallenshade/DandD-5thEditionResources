@@ -1,25 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-// when this is called all i need it to do is go throught
-// eh array called and get the name and aditional url
-// display the name and grab the url, in the return call
-// another tool to display all of the wanted results.
 export default function DisplayTool({ url }) {
+
+    let [result, setResultState] = useState([]);
 
     fetch(url)
     .then(res => res.json())
     .then(res => {
-        let results = res.results
-        console.log(results);
+        let arr = res.results
+        // console.log(arr);
+
+
+        let arrName = arr.map(i => i.name);
+        console.log(arrName);
+        // let arrUrl = arr.map(i => i.url);
+        // console.log(arrUrl);
+
+       
+        let k=0
+        setResultState(arr.map(i => {
+            return(
+                <div key={k = k+1}> 
+                    <p>{i.name}</p>
+                    <p>{i.url}</p>
+                </div>
+            )
+        },[]))
 
     })
+   
     .catch(err => {
         console.log(`The arror is${err}`)
     })
-
+    
     return (
         <div>
-            <p>Dispaly tool {url}</p>
+            {result}
         </div>
     );
 }
