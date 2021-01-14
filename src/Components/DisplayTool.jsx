@@ -1,41 +1,39 @@
-import React, { useState } from 'react';
+import React from 'react';
+let arrName = [];
+// let arrUrl = [];
 
-export default function DisplayTool({ url }) {
-
-    let [result, setResultState] = useState([]);
-
-    fetch(url)
+async function urlCall(url){
+    await fetch(url)
     .then(res => res.json())
     .then(res => {
-        let arr = res.results
-        // console.log(arr);
+        let arrMain = res.results
 
+        arrName = arrMain.map(i => i.name);
+        // console.log(`the name array is ` + arrName);
+        // console.log(url)
 
-        let arrName = arr.map(i => i.name);
-        console.log(arrName);
-        // let arrUrl = arr.map(i => i.url);
-        // console.log(arrUrl);
-
-       
-        let k=0
-        setResultState(arr.map(i => {
-            return(
-                <div key={k = k+1}> 
-                    <p>{i.name}</p>
-                    <p>{i.url}</p>
-                </div>
-            )
-        },[]))
-
+        // arrUrl = arrMain.map(i => i.url);
+        // console.log(arrUrl)
+        
     })
-   
-    .catch(err => {
-        console.log(`The arror is${err}`)
-    })
+    .catch(err => console.log(`Your spell fizzled out!- ${err}`))
+
+    console.log(`gate 1 passed`)
+}
+
+export default function DisplayTool({ url }) {
+    // console.log(`the name array is ` + arrName);
+    console.log(url)
+
+    // figure out how to put an await here
+    urlCall(url)
     
+    console.log(`the name array is ` + arrName);
     return (
+
         <div>
-            {result}
+            <p>{arrName}</p>
+            <p>{url}</p>
         </div>
     );
 }

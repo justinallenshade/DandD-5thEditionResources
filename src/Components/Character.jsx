@@ -1,23 +1,26 @@
 import React from 'react';
 import DisplayTool from './DisplayTool'
 
-function Character({ url }) {
+export default function Character({ url }) {
    
     return (
         <div>
-            <p>classes</p>
-            <DisplayTool url={url+"classes"} />
-            <p>Ability scores</p>
-            <DisplayTool url={url+["ability-scores"]} />
+            <div>
+                <p>classes</p>
+                <DisplayTool url={url+"classes"} />
+            </div>
+            <div>
+                <p>Ability scores</p>
+                <DisplayTool url={url+["ability-scores"]} />
+            </div>
+
             <p>Character races</p>
-            <DisplayTool url={url+"races"} />
+            {/* <DisplayTool url={url+"races"} /> */}
             <p>Subraces</p>
-            <DisplayTool url={url+"subraces"} />
+            {/* <DisplayTool url={url+"subraces"} /> */}
             <p>Languages</p>
-            <DisplayTool url={url+"languages"} />
+            {/* <DisplayTool url={url+"languages"} /> */}
             
         </div>
     );
 }
-
-export default Character;

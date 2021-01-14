@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Header(props) {
     return (
         <div className="header">
+            
             <Link to={'/'} className="tabs" >Home</Link> 
             <Link to={'/character'} className="tabs" >Character</Link>
             <Link to={'/monsters'} className="tabs" >Monsters</Link>
