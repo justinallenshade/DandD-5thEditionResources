@@ -7,7 +7,7 @@ export default function Skill({ url }) {
             <p>Skills</p>
             <DisplayTool url={url+"skills"} />
             <p>Weapon Properties</p>
-            <DisplayTool url={url+["weapon-properties"]} />
+            {/* <DisplayTool url={url+["weapon-properties"]} /> */}
         </div>
     );
 }

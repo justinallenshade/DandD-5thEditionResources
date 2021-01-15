@@ -5,15 +5,13 @@ export default function Character({ url }) {
    
     return (
         <div>
-            <div>
-                <p>classes</p>
-                <DisplayTool url={url+"classes"} />
-            </div>
-            <div>
-                <p>Ability scores</p>
-                <DisplayTool url={url+["ability-scores"]} />
-            </div>
-
+            
+            <p>classes</p>
+            <DisplayTool url={url+"classes"} />
+            
+            
+            <p>Ability scores</p>
+            {/* <DisplayTool url={url+["ability-scores"]} /> */}
             <p>Character races</p>
             {/* <DisplayTool url={url+"races"} /> */}
             <p>Subraces</p>

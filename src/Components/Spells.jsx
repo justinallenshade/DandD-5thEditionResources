@@ -7,7 +7,7 @@ function Spells({ url }) {
             <p>Spells</p>
             <DisplayTool url={url+"spells"} />
             <p>Magic Schools</p>
-            <DisplayTool url={url+["magic-schools"]} />
+            {/* <DisplayTool url={url+["magic-schools"]} /> */}
         </div>
     );
 }

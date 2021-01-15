@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 let arrName = [];
 // let arrUrl = [];
 
@@ -8,8 +8,15 @@ async function urlCall(url){
     .then(res => {
         let arrMain = res.results
 
-        arrName = arrMain.map(i => i.name);
-        // console.log(`the name array is ` + arrName);
+        let k=0;
+        arrName = arrMain.map(i => 
+        {return(
+            <div key={k = k+1} className="results">
+                <p>{i.name}</p>
+            </div>
+        )});
+        
+        console.log(arrMain.map(i=> i.name));
         // console.log(url)
 
         // arrUrl = arrMain.map(i => i.url);
@@ -21,19 +28,32 @@ async function urlCall(url){
     console.log(`gate 1 passed`)
 }
 
+
+
+
 export default function DisplayTool({ url }) {
-    // console.log(`the name array is ` + arrName);
     console.log(url)
-
     // figure out how to put an await here
-    urlCall(url)
+    urlCall(url);
     
-    console.log(`the name array is ` + arrName);
-    return (
+    const [state, setState] = useState([])
+    useEffect(() => {
+        setTimeout(() => {
+            console.log(`use effect ran`)
+            setState([arrName]);
+        }, 500);
+    },[]);
 
+
+    console.log(`reached the return------------------------`);
+    // console.log(arrName);
+    return (
+        
         <div>
-            <p>{arrName}</p>
+            {state}
             <p>{url}</p>
         </div>
     );
 }
+
+

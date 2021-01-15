@@ -7,7 +7,7 @@ function Damage({ url }) {
             <p>Damage types</p>
             <DisplayTool url={url + ["damage-types"]} />
             <p>Conditions</p>
-            <DisplayTool url={url + "conditions"} />
+            {/* <DisplayTool url={url + "conditions"} /> */}
         </div>
     );
 }

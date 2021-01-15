@@ -7,9 +7,9 @@ export default function Rules({ url }) {
             <p>Rules</p>
             <DisplayTool url={url+"rules"} />
             <p>Rule sections</p>
-            <DisplayTool url={url+["rule-sections"]} />
+            {/* <DisplayTool url={url+["rule-sections"]} /> */}
             <p>Features</p>
-            <DisplayTool url={url+"features"} />
+            {/* <DisplayTool url={url+"features"} /> */}
         </div>
     );
 }
