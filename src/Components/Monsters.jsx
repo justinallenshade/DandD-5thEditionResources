@@ -2,13 +2,11 @@ import React from 'react';
 import DisplayTool from './DisplayTool';
 
 
-function Monsters({ url }) {
+export default function Monsters({ url }) {
     return (
         <div>
-            <p>Monsters</p>
+            <h1>Monsters</h1>
             <DisplayTool url={url+"monsters"} />
         </div>
     );
 }
-
-export default Monsters;

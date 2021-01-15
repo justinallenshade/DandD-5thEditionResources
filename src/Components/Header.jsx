@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header(props) {
+export default function Header() {
     return (
         <div className="header">
             
@@ -9,10 +9,10 @@ export default function Header(props) {
             <Link to={'/character'} className="tabs" >Character</Link>
             <Link to={'/monsters'} className="tabs" >Monsters</Link>
             <Link to={'/magic'} className="tabs" >Spell and magic</Link>
-            <Link to={'/equipment'} className="tabs" >Equipment and magic items</Link>
+            <Link to={'/items'} className="tabs" >Equipment and magic items</Link>
             <Link to={'/damage'} className="tabs" >Damage types and conditions</Link>
-            <Link to={'/skills'} className="tabs" >Skills traits and weapon properties</Link>
-            <Link to={'/rules'} className="tabs" >Rules and features</Link>
+            <Link to={'/traits'} className="tabs" >Skills traits and weapon properties</Link>
+            <Link to={'/mainrule'} className="tabs" >Rules and features</Link>
         </div>
     );
 }

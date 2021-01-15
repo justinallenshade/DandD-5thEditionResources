@@ -1,24 +1,23 @@
 import React from 'react';
-import DisplayTool from './DisplayTool'
+import { Link } from 'react-router-dom';
 
-export default function Character({ url }) {
+export default function Character() {
    
     return (
+
         <div>
-            
-            <p>classes</p>
-            <DisplayTool url={url+"classes"} />
-            
-            
-            <p>Ability scores</p>
-            {/* <DisplayTool url={url+["ability-scores"]} /> */}
-            <p>Character races</p>
-            {/* <DisplayTool url={url+"races"} /> */}
-            <p>Subraces</p>
-            {/* <DisplayTool url={url+"subraces"} /> */}
-            <p>Languages</p>
-            {/* <DisplayTool url={url+"languages"} /> */}
-            
+            <div className="charWhole">
+                <Link to={'/character/classes'} className="char" >Classes</Link>
+                <Link to={'/character/races'} className="char" >Races</Link>
+                <Link to={'/character/subraces'} className="char" >Subraces</Link>
+                <Link to={'/character/score'} className="char" >Ability Scores</Link>
+                <Link to={'/character/languages'} className="char" >Languages</Link>
+            </div>
+            <div>
+                <p>HIIIII</p>
+            </div>
+
         </div>
+      
     );
 }

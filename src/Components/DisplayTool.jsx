@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 let arrName = [];
-// let arrUrl = [];
+// let urlLayer2 = "https://www.dnd5eapi.co"
+
 
 async function urlCall(url){
     await fetch(url)
@@ -13,14 +14,14 @@ async function urlCall(url){
         {return(
             <div key={k = k+1} className="results">
                 <p>{i.name}</p>
+                {/* <p>{i.url}</p> */}
             </div>
         )});
         
         console.log(arrMain.map(i=> i.name));
         // console.log(url)
 
-        // arrUrl = arrMain.map(i => i.url);
-        // console.log(arrUrl)
+        
         
     })
     .catch(err => console.log(`Your spell fizzled out!- ${err}`))
@@ -33,7 +34,7 @@ async function urlCall(url){
 
 export default function DisplayTool({ url }) {
     console.log(url)
-    // figure out how to put an await here
+    
     urlCall(url);
     
     const [state, setState] = useState([])
@@ -41,17 +42,15 @@ export default function DisplayTool({ url }) {
         setTimeout(() => {
             console.log(`use effect ran`)
             setState([arrName]);
-        }, 500);
+        }, 650);
     },[]);
 
 
     console.log(`reached the return------------------------`);
-    // console.log(arrName);
     return (
         
         <div>
             {state}
-            <p>{url}</p>
         </div>
     );
 }

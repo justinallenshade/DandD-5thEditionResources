@@ -1,13 +1,13 @@
 import React from 'react';
-import DisplayTool from './DisplayTool';
+import { Link } from 'react-router-dom'
 
 function Damage({ url }) {
     return (
         <div>
-            <p>Damage types</p>
-            <DisplayTool url={url + ["damage-types"]} />
-            <p>Conditions</p>
-            {/* <DisplayTool url={url + "conditions"} /> */}
+            <div className="charWhole">
+                <Link to={'/damage/types'} className="char" >Damage Types</Link>
+                <Link to={'/damage/conditions'} className="char" >Damage Conditions</Link>
+            </div>
         </div>
     );
 }

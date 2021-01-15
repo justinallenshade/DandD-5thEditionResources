@@ -1,15 +1,12 @@
 import React from 'react';
 import DisplayTool from './DisplayTool'
 
-function Spells({ url }) {
+export default function Spells({ url }) {
     return (
         <div>
             <p>Spells</p>
             <DisplayTool url={url+"spells"} />
-            <p>Magic Schools</p>
-            {/* <DisplayTool url={url+["magic-schools"]} /> */}
         </div>
     );
 }
 
-export default Spells;

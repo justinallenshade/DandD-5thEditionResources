@@ -4,10 +4,8 @@ import DisplayTool from './DisplayTool'
 export default function Skill({ url }) {
     return (
         <div>
-            <p>Skills</p>
+            <h1>Skills</h1>
             <DisplayTool url={url+"skills"} />
-            <p>Weapon Properties</p>
-            {/* <DisplayTool url={url+["weapon-properties"]} /> */}
         </div>
     );
 }

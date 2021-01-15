@@ -19,3 +19,22 @@
   color: black;
   font-size: large;
 }
+
+.results{
+  border: solid rgba(0, 0, 0, 0.219);
+}
+
+.charWhole{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(7, 7, 7, 0.472);
+}
+
+.char{
+  padding: 3px;
+  border-right: solid black 1px;
+  border-left: solid black 1px;
+  background-color: rgba(8, 245, 225, 0.829);
+  color: black;
+  font-size: large;
+}

@@ -7,8 +7,6 @@ export default function Equipment ({ url }) {
         <div>
             <p>Equipment</p>
             <DisplayTool url={url+"equipment"} />
-            <p>Magic items</p>
-            {/* <DisplayTool url={url+["magic-items"]} /> */}
         </div>
     );
 }
