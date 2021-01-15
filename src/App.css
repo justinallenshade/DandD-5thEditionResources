@@ -20,9 +20,6 @@
   font-size: large;
 }
 
-.results{
-  border: solid rgba(0, 0, 0, 0.219);
-}
 
 .charWhole{
   display: flex;
@@ -37,4 +34,16 @@
   background-color: rgba(8, 245, 225, 0.829);
   color: black;
   font-size: large;
+}
+
+.wholeResults{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.results{
+  border: solid rgba(0, 0, 0, 0.219);
+  margin: 2px;
+  width: 20%;
 }

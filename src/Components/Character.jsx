@@ -13,10 +13,6 @@ export default function Character() {
                 <Link to={'/character/score'} className="char" >Ability Scores</Link>
                 <Link to={'/character/languages'} className="char" >Languages</Link>
             </div>
-            <div>
-                <p>HIIIII</p>
-            </div>
-
         </div>
       
     );

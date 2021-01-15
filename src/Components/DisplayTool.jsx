@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 let arrName = [];
+let urlCondition = 0;
 // let urlLayer2 = "https://www.dnd5eapi.co"
 
 
@@ -27,6 +28,8 @@ async function urlCall(url){
     .catch(err => console.log(`Your spell fizzled out!- ${err}`))
 
     console.log(`gate 1 passed`)
+    urlCondition = url
+    
 }
 
 
@@ -35,21 +38,25 @@ async function urlCall(url){
 export default function DisplayTool({ url }) {
     console.log(url)
     
-    urlCall(url);
+    
+    if(urlCondition === 0 || urlCondition !== url){
+        console.log(`conditional ran`)
+        urlCall(url);
+    }
     
     const [state, setState] = useState([])
     useEffect(() => {
         setTimeout(() => {
             console.log(`use effect ran`)
-            setState([arrName]);
-        }, 650);
+            setState(arrName);
+        }, 1000);
     },[]);
-
+   
 
     console.log(`reached the return------------------------`);
     return (
         
-        <div>
+        <div className="wholeResults">
             {state}
         </div>
     );
