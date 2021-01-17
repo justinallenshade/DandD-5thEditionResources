@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from 'react';
-
-
 let arrName = [];
-let arrUrls = [];
+
 
 let urlCondition = 0;
 let layer2 = "https://www.dnd5eapi.co"
 
-function urlCall2(url2){
-    fetch(url2)
+
+
+let mainArr = []
+function stage2(url2){
+    let call2 = layer2 + url2;
+
+   
+    fetch(call2)
     .then(res => res.json())
     .then(res => {
-        console.log(res)
-        arrUrls.push(res.name);
+        // mainArr.push(res.name)
+        mainArr= res.name
+        console.log(mainArr)
     })
-    .catch(err => console.log(`failed to seduce the dragon----- ${err}`))
-    console.log(`gate 2 passed`)
+    
 }
 
 async function urlCall(url){
@@ -26,18 +30,18 @@ async function urlCall(url){
         
 
         let k=0;
-        arrName = arrMain.map(i => 
-        {return(
+        arrName = arrMain.map(i => {
             
+            return(
             <div key={k = k+1} className="results">
-                <p>{i.name}</p> 
-                {urlCall2(layer2 + i.url)}
-                <p>{arrUrls}</p>
-                
+                <p>{i.name}</p>
+                {stage2(i.url)}
+                <p>{mainArr}</p>
+                {console.log(mainArr)}
+                <a href={layer2 + i.url} target="_blank" rel="noreferrer">More Info</a>
             </div>
-            
-        )});
-        // console.log(arrUrls)
+            )
+        });
     })
    
     .catch(err => console.log(`Your spell fizzled out!- ${err}`))
@@ -46,7 +50,6 @@ async function urlCall(url){
 
     console.log(`gate 1 passed`)
     urlCondition = url
-    
 }
 
 
@@ -55,11 +58,10 @@ async function urlCall(url){
 export default function DisplayTool({ url }) {
     console.log(url)
     
-    
     if(urlCondition === 0 || urlCondition !== url){
         console.log(`conditional ran`)
         urlCall(url);
-        arrUrls =[]
+        mainArr =[]
     }
     
     const [state, setState] = useState([])
@@ -67,17 +69,16 @@ export default function DisplayTool({ url }) {
         setTimeout(() => {
             console.log(`use effect ran`)
             setState(arrName);
-        }, 10000);
+        }, 1000);
     },[]);
    
 
     console.log(`reached the return------------------------`);
-    
+
     return (
         
         <div className="wholeResults">
             {state}
-           
         </div>
     );
 }
