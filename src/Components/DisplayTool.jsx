@@ -22,6 +22,20 @@ let abilityBonusOptions =[]
 let desc = []
 let fullName =[]
 let skills =[]
+let language = []
+let typicalSpeaker = []
+let script =[]
+let ritual =[]
+let castingTime =[]
+let spellLevel =[]
+let concentration =[]
+let duration = []
+let material =[]
+let range = []
+let cost =[]
+let equipmentCategory =[]
+let weight = []
+let featuresClass =[]
 
 let mainArr = []
 async function stage2(url2){
@@ -46,6 +60,21 @@ async function stage2(url2){
         desc.push(res.desc)
         fullName.push(res.full_name)
         skills.push(res.skills)
+        language.push(res.type)
+        typicalSpeaker.push(res.typical_speakers)
+        script.push(res.script)
+        castingTime.push(res.casting_time)
+        spellLevel.push(res.level)
+        concentration.push(res.concentration)
+        duration.push(res.duration)
+        material.push(res.material)
+        range.push(res.range)
+        ritual.push(res.ritual)
+        cost.push(res.cost)
+        equipmentCategory.push(res.equipment_category)
+        weight.push(res.weight)
+        featuresClass.push(res.class)
+
         
         let j =0;
         mainArr = arrName.map(i => {
@@ -64,7 +93,7 @@ async function stage2(url2){
                 if(spells[j] !== undefined){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{`Hit Die ${hitDie[j]}`}</p>
                             <p>{`Saving Thorws: ${savingThrows[j][0].name} and ${savingThrows[j][1].name}`}</p>
                             <p><a href={layer2 + url3[j]} target="_blank" rel="noreferrer">Level Info</a></p>
@@ -76,7 +105,7 @@ async function stage2(url2){
                 else{
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{`Hit Die ${hitDie[j]}`}</p>
                             <p>{`Saving Thorws: ${savingThrows[j][0].name} and ${savingThrows[j][1].name}`}</p>
                             <p><a href={layer2 + url3[j]} target="_blank" rel="noreferrer">Level Info</a></p>
@@ -89,7 +118,7 @@ async function stage2(url2){
                 if(subArr[j] === "Dragonborn" || subArr[j] === "Half-Orc" || subArr[j] === "Tiefling"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{`Speed ${raceSpeed[j]}`}</p>
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} ${abilityBonus[j][1].ability_score.name}: ${abilityBonus[j][1].bonus} `}</p>
                             <p>{raceAlignemt[j]}</p>
@@ -100,7 +129,7 @@ async function stage2(url2){
                 if(subArr[j] === "Dwarf" || subArr[j] === "Elf" || subArr[j] === "Gnome" || subArr[j] === "Halfling"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{`Speed ${raceSpeed[j]}`}</p>
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
                             <p>{raceAlignemt[j]}</p>
@@ -111,7 +140,7 @@ async function stage2(url2){
                 if(subArr[j] === "Human"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{`Speed ${raceSpeed[j]}`}</p>
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} ${abilityBonus[j][1].ability_score.name}: ${abilityBonus[j][1].bonus} ${abilityBonus[j][2].ability_score.name}: ${abilityBonus[j][2].bonus}`}</p>
                             <p>{` ${abilityBonus[j][3].ability_score.name}: ${abilityBonus[j][3].bonus} ${abilityBonus[j][4].ability_score.name}: ${abilityBonus[j][4].bonus} ${abilityBonus[j][5].ability_score.name}: ${abilityBonus[j][5].bonus}`}</p>
@@ -123,7 +152,7 @@ async function stage2(url2){
                 if(subArr[j] === "Half-Elf"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{`Speed ${raceSpeed[j]}`}</p>
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
                             <p>{`Choose 2 ---${abilityBonusOptions[j].from[0].ability_score.name}:${abilityBonusOptions[j].from[0].bonus} ${abilityBonusOptions[j].from[1].ability_score.name}:${abilityBonusOptions[j].from[1].bonus} ${abilityBonusOptions[j].from[2].ability_score.name}:${abilityBonusOptions[j].from[2].bonus} ${abilityBonusOptions[j].from[3].ability_score.name}:${abilityBonusOptions[j].from[3].bonus} ${abilityBonusOptions[j].from[4].ability_score.name}:${abilityBonusOptions[j].from[4].bonus}`}</p>
@@ -136,7 +165,7 @@ async function stage2(url2){
                 if(subArr[j]=== "Hill Dwarf" || subArr[j]=== "High Elf" || subArr[j]=== "Lightfoot Halfling"|| subArr[j]=== "Rock Gnome"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
                             <p>{desc[j]}</p>
                             <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
@@ -149,7 +178,7 @@ async function stage2(url2){
                 if(fullName[j] === "Constitution"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
                         </div>
@@ -158,7 +187,7 @@ async function stage2(url2){
                 if(fullName[j] === "Strength"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <p>{`Skills: ${skills[j][0].name}`}</p>
                             <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
@@ -168,7 +197,7 @@ async function stage2(url2){
                 if(fullName[j] === "Dexterity"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}`}</p>
                             <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
@@ -178,7 +207,7 @@ async function stage2(url2){
                 if(fullName[j] === "Charisma"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}| ${skills[j][3].name}`}</p>
                             <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
@@ -188,7 +217,7 @@ async function stage2(url2){
                 if(fullName[j] === "Intelligence" || fullName[j] === "Wisdom"){
                     return(
                         <div key={j = j+1} className="results">
-                            <p>{subArr[j]}</p>
+                            <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}| ${skills[j][3].name}| ${skills[j][4].name}`}</p>
                             <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
@@ -196,18 +225,77 @@ async function stage2(url2){
                     )
                 }
             }
+            if(typicalSpeaker[j] !== undefined){
+                return(
+                    <div key={j = j+1} className="results">
+                        <h3>{subArr[j]}</h3>
+                        <p>{`Rarity: ${language[j]}`}</p>
+                        <p>{`Typical speakers: ${typicalSpeaker[j]}`}</p>
+                        <p>{`Script: ${script[j]}`}</p>
+                        <p>{desc[j]}</p>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                    </div>
+                )
+            }
+           if(castingTime[j] !== undefined){
+            return(
+                <div key={j = j+1} className="results">
+                    <h3>{subArr[j]}</h3>
+                    <p>{`Spell Level: ${spellLevel[j]}`}</p>
+                    <p>{`Spell range: ${range[j]}`}</p>
+                    <p>{`Spell Duration: ${duration[j]}`}</p>
+                    <p>{`Casting time: ${castingTime[j]}`}</p>
+                    <p>{`Concentration: ${concentration[j]}`}</p>
+                    <p>{`Ritual: ${ritual[j]}`}</p>
+                    <p>{`Materials: ${material[j]}`}</p>
+                    <p>{desc[j]}</p>
+                    <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                </div>
+                )
+            }
+            if(cost[j] !== undefined){
+                return(
+                    <div key={j = j+1} className="results">
+                        <h3>{subArr[j]}</h3>
+                        <p>{`Category: ${equipmentCategory[j].name}`}</p>
+                        <p>{`Weight: ${weight[j]}`}</p>
+                        <p>{`Cost ${cost[j].quantity} in ${cost[j].unit}`}</p>
+                        <p>{desc[j]}</p>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                    </div>
+                )
+            }
+            if(equipmentCategory[j] !== undefined){
+                return(
+                    <div key={j = j+1} className="results">
+                        <h3>{subArr[j]}</h3>
+                        <p>{`Category: ${equipmentCategory[j].name}`}</p>
+                        <p>{desc[j]}</p>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                    </div>
+                )
+            }
+            if(featuresClass[j] !== undefined){
+                return(
+                    <div key={j = j+1} className="results">
+                        <h3>{subArr[j]}</h3>
+                        <p>{`Level: ${spellLevel[j]}`}</p>
+                        <p>{`Class ${featuresClass[j].name}`}</p>
+                        <p>{desc[j]}</p>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                    </div>
+                )
+            }
            
-           
-            
             return(
                 <div key={j = j+1} className="results">
                     <p>{subArr[j]}</p>
+                    <p>{desc[j]}</p>
                     <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
                 </div>
             )
             
         })
-        // console.log(abilityBonusOptions[4])
     })
 
     
@@ -231,19 +319,11 @@ async function urlCall(url){
    
     .catch(err => console.log(`Your spell fizzled out!- ${err}`))
 
-    
-
-    console.log(`gate 1 passed`)
     urlCondition = url
 }
 
-
-
-
 export default function DisplayTool({ url, wait }) {
-    console.log(url)
-    console.log(wait)
-    
+
     if(urlCondition === 0 || urlCondition !== url){
         console.log(`conditional ran`)
         urlCall(url);
@@ -263,25 +343,33 @@ export default function DisplayTool({ url, wait }) {
         desc =[]
         fullName=[]
         skills=[]
+        typicalSpeaker =[]
+        language =[]
+        script=[]
+        castingTime =[]
+        spellLevel =[]
+        concentration =[]
+        duration = []
+        material =[]
+        range = []
+        ritual=[]
+        cost =[]
+        equipmentCategory =[]
+        weight = []
+        featuresClass =[]
     }
     
     const [state, setState] = useState([])
     useEffect(() => {
         setTimeout(() => {
-            console.log(`use effect ran`)
             setState(mainArr);
         }, wait);
     },[wait]);
    
 
-    console.log(`reached the return------------------------`);
-
     return (
-        
         <div className="wholeResults">
             {state}
         </div>
     );
 }
-
-

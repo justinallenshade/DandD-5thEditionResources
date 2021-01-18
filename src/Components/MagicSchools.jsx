@@ -4,8 +4,8 @@ import DisplayTool from './DisplayTool'
 export default function MagicSchools({ url }) {
     return (
         <div>
-             <p>Magic Schools</p>
-            <DisplayTool url={url+["magic-schools"]} wait={500}/>
+             <h1>Magic Schools</h1>
+            <DisplayTool url={url+["magic-schools"]} wait={700}/>
         </div>
     );
 }

@@ -4,8 +4,8 @@ import DisplayTool from './DisplayTool'
 export default function Spells({ url }) {
     return (
         <div>
-            <p>Spells</p>
-            <DisplayTool url={url+"spells"} wait={6250}/>
+            <h1>Spells</h1>
+            <DisplayTool url={url+"spells"} wait={7000}/>
         </div>
     );
 }

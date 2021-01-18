@@ -33,7 +33,6 @@ import WeaponTraits from './Components/WeaponTraits'
 import MainTraits from './Components/MainTraits'
 
 import MainRule from './Components/MainRule'
-import Rules from './Components/Rules'
 import RuleSection from './Components/RuleSection'
 import Features from './Components/Features'
 
@@ -85,7 +84,6 @@ export default function App() {
             <Route path="/traits/traits" exact render={() => <MainTraits url={url}/>} />
             
             <Route path="/mainrule" exact render={() => <MainRule url={url}/>} />
-            <Route path="/mainrule/rules" exact render={() => <Rules url={url}/>} />
             <Route path="/mainrule/rulesection" exact render={() => <RuleSection url={url}/>} />
             <Route path="/mainrule/features" exact render={() => <Features url={url}/>} />
             

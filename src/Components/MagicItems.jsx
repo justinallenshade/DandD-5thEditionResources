@@ -4,8 +4,8 @@ import DisplayTool from './DisplayTool'
 export default function MAgicItems({ url }) {
     return (
         <div>
-            <p>Magic items</p>
-            <DisplayTool url={url+["magic-items"]} wait={5000}/>
+            <h1>Magic items</h1>
+            <DisplayTool url={url+["magic-items"]} wait={6000}/>
         </div>
     );
 }
