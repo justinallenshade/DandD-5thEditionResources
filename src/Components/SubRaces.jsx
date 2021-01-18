@@ -5,7 +5,7 @@ export default function SubRaces({ url }) {
     return (
         <div>
             <h1>Subraces</h1>
-            <DisplayTool url={url+"subraces"} />
+            <DisplayTool url={url+"subraces"} wait={700}/>
         </div>
     );
 }

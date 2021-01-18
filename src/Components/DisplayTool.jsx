@@ -6,19 +6,210 @@ let urlCondition = 0;
 let layer2 = "https://www.dnd5eapi.co"
 
 
+let subArr = []
+let subArr2=[]
+let subArr3=[]
+let subArr4=[]
+let subArr5=[]
+let hitDie =[]
+let savingThrows =[]
+let spells = []
+let url3=[]
+let raceSpeed = []
+let raceAlignemt = []
+let abilityBonus =[];
+let abilityBonusOptions =[]
+let desc = []
+let fullName =[]
+let skills =[]
 
 let mainArr = []
-function stage2(url2){
+async function stage2(url2){
     let call2 = layer2 + url2;
 
-   
-    fetch(call2)
+    await fetch(call2)
     .then(res => res.json())
     .then(res => {
-        // mainArr.push(res.name)
-        mainArr= res.name
-        console.log(mainArr)
+        subArr.push(res.name)
+        subArr2.push(layer2 + res.url)
+        subArr3.push(res.challenge_rating)
+        subArr4.push(res.armor_class)
+        subArr5.push(res.hit_points)
+        hitDie.push(res.hit_die)
+        savingThrows.push(res.saving_throws)
+        url3.push(res.class_levels)
+        spells.push(res.spells)
+        raceSpeed.push(res.speed)
+        abilityBonus.push(res.ability_bonuses)
+        raceAlignemt.push(res.alignment)
+        abilityBonusOptions.push(res.ability_bonus_options)
+        desc.push(res.desc)
+        fullName.push(res.full_name)
+        skills.push(res.skills)
+        
+        let j =0;
+        mainArr = arrName.map(i => {
+            if(subArr3[j] !== undefined){
+                return(
+                    <div key={j = j+1} className="results">
+                        <h3>{subArr[j]}</h3>
+                        <p>{`Challenge rating: ${subArr3[j]}`}</p>
+                        <p>{`armor class: ${subArr4[j]}`}</p>
+                        <p>{`Hit points: ${subArr5[j]}`}</p>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                    </div>
+                )
+            }
+            if(hitDie[j] !== undefined){
+                if(spells[j] !== undefined){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{`Hit Die ${hitDie[j]}`}</p>
+                            <p>{`Saving Thorws: ${savingThrows[j][0].name} and ${savingThrows[j][1].name}`}</p>
+                            <p><a href={layer2 + url3[j]} target="_blank" rel="noreferrer">Level Info</a></p>
+                            <p><a href={layer2 + spells[j]} target="_blank" rel="noreferrer">Spell Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                        </div>
+                    )
+                }
+                else{
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{`Hit Die ${hitDie[j]}`}</p>
+                            <p>{`Saving Thorws: ${savingThrows[j][0].name} and ${savingThrows[j][1].name}`}</p>
+                            <p><a href={layer2 + url3[j]} target="_blank" rel="noreferrer">Level Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                        </div>
+                    )
+                }
+            }
+            if(abilityBonus[j] !== undefined){
+                if(subArr[j] === "Dragonborn" || subArr[j] === "Half-Orc" || subArr[j] === "Tiefling"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{`Speed ${raceSpeed[j]}`}</p>
+                            <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} ${abilityBonus[j][1].ability_score.name}: ${abilityBonus[j][1].bonus} `}</p>
+                            <p>{raceAlignemt[j]}</p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                        </div>
+                    )
+                }
+                if(subArr[j] === "Dwarf" || subArr[j] === "Elf" || subArr[j] === "Gnome" || subArr[j] === "Halfling"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{`Speed ${raceSpeed[j]}`}</p>
+                            <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
+                            <p>{raceAlignemt[j]}</p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                        </div>
+                    )
+                }
+                if(subArr[j] === "Human"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{`Speed ${raceSpeed[j]}`}</p>
+                            <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} ${abilityBonus[j][1].ability_score.name}: ${abilityBonus[j][1].bonus} ${abilityBonus[j][2].ability_score.name}: ${abilityBonus[j][2].bonus}`}</p>
+                            <p>{` ${abilityBonus[j][3].ability_score.name}: ${abilityBonus[j][3].bonus} ${abilityBonus[j][4].ability_score.name}: ${abilityBonus[j][4].bonus} ${abilityBonus[j][5].ability_score.name}: ${abilityBonus[j][5].bonus}`}</p>
+                            <p>{raceAlignemt[j]}</p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                        </div>
+                    )
+                }
+                if(subArr[j] === "Half-Elf"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{`Speed ${raceSpeed[j]}`}</p>
+                            <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
+                            <p>{`Choose 2 ---${abilityBonusOptions[j].from[0].ability_score.name}:${abilityBonusOptions[j].from[0].bonus} ${abilityBonusOptions[j].from[1].ability_score.name}:${abilityBonusOptions[j].from[1].bonus} ${abilityBonusOptions[j].from[2].ability_score.name}:${abilityBonusOptions[j].from[2].bonus} ${abilityBonusOptions[j].from[3].ability_score.name}:${abilityBonusOptions[j].from[3].bonus} ${abilityBonusOptions[j].from[4].ability_score.name}:${abilityBonusOptions[j].from[4].bonus}`}</p>
+                            <p>{raceAlignemt[j]}</p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                        </div>
+
+                    )
+                }
+                if(subArr[j]=== "Hill Dwarf" || subArr[j]=== "High Elf" || subArr[j]=== "Lightfoot Halfling"|| subArr[j]=== "Rock Gnome"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
+                            <p>{desc[j]}</p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                        </div>
+                    )
+                }
+            }
+
+            if(fullName !== undefined){
+                if(fullName[j] === "Constitution"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{desc[j]}</p>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        </div>
+                    )
+                }
+                if(fullName[j] === "Strength"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{desc[j]}</p>
+                            <p>{`Skills: ${skills[j][0].name}`}</p>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        </div>
+                    )
+                }
+                if(fullName[j] === "Dexterity"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{desc[j]}</p>
+                            <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}`}</p>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        </div>
+                    )
+                }
+                if(fullName[j] === "Charisma"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{desc[j]}</p>
+                            <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}| ${skills[j][3].name}`}</p>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        </div>
+                    )
+                }
+                if(fullName[j] === "Intelligence" || fullName[j] === "Wisdom"){
+                    return(
+                        <div key={j = j+1} className="results">
+                            <p>{subArr[j]}</p>
+                            <p>{desc[j]}</p>
+                            <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}| ${skills[j][3].name}| ${skills[j][4].name}`}</p>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        </div>
+                    )
+                }
+            }
+           
+           
+            
+            return(
+                <div key={j = j+1} className="results">
+                    <p>{subArr[j]}</p>
+                    <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                </div>
+            )
+            
+        })
+        // console.log(abilityBonusOptions[4])
     })
+
     
 }
 
@@ -27,18 +218,12 @@ async function urlCall(url){
     .then(res => res.json())
     .then(res => {
         let arrMain = res.results
-        
 
         let k=0;
-        arrName = arrMain.map(i => {
-            
+        arrName = arrMain.map(i => { 
             return(
-            <div key={k = k+1} className="results">
-                <p>{i.name}</p>
+            <div key={k = k+1} className="wholeResults">
                 {stage2(i.url)}
-                <p>{mainArr}</p>
-                {console.log(mainArr)}
-                <a href={layer2 + i.url} target="_blank" rel="noreferrer">More Info</a>
             </div>
             )
         });
@@ -55,22 +240,38 @@ async function urlCall(url){
 
 
 
-export default function DisplayTool({ url }) {
+export default function DisplayTool({ url, wait }) {
     console.log(url)
+    console.log(wait)
     
     if(urlCondition === 0 || urlCondition !== url){
         console.log(`conditional ran`)
         urlCall(url);
-        mainArr =[]
+        subArr=[]
+        subArr2=[]
+        subArr3=[]
+        subArr4=[]
+        subArr5=[]
+        hitDie=[]
+        savingThrows =[]
+        spells =[]
+        url3 =[]
+        raceSpeed =[]
+        abilityBonus = []
+        raceAlignemt =[]
+        abilityBonusOptions =[]
+        desc =[]
+        fullName=[]
+        skills=[]
     }
     
     const [state, setState] = useState([])
     useEffect(() => {
         setTimeout(() => {
             console.log(`use effect ran`)
-            setState(arrName);
-        }, 1000);
-    },[]);
+            setState(mainArr);
+        }, wait);
+    },[wait]);
    
 
     console.log(`reached the return------------------------`);

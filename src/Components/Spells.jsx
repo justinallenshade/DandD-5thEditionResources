@@ -5,7 +5,7 @@ export default function Spells({ url }) {
     return (
         <div>
             <p>Spells</p>
-            <DisplayTool url={url+"spells"} />
+            <DisplayTool url={url+"spells"} wait={6250}/>
         </div>
     );
 }

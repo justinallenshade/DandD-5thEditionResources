@@ -5,7 +5,7 @@ export default function Skill({ url }) {
     return (
         <div>
             <h1>Skills</h1>
-            <DisplayTool url={url+"skills"} />
+            <DisplayTool url={url+"skills"} wait={700}/>
         </div>
     );
 }
