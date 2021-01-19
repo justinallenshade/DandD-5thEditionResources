@@ -11,7 +11,7 @@ export default function Character() {
                 <Link to={'/character/score'} className="char" >Ability Scores</Link>
                 <Link to={'/character/languages'} className="char" >Languages</Link>
             </div>
-            <p>Please select a category for me to search for</p>
+            <p className="select">Please select a category for me to search for</p>
         </div>
     );
 }

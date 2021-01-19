@@ -85,7 +85,7 @@ async function stage2(url2){
                         <p>{`Challenge rating: ${subArr3[j]}`}</p>
                         <p>{`armor class: ${subArr4[j]}`}</p>
                         <p>{`Hit points: ${subArr5[j]}`}</p>
-                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                     </div>
                 )
             }
@@ -96,9 +96,9 @@ async function stage2(url2){
                             <h3>{subArr[j]}</h3>
                             <p>{`Hit Die ${hitDie[j]}`}</p>
                             <p>{`Saving Thorws: ${savingThrows[j][0].name} and ${savingThrows[j][1].name}`}</p>
-                            <p><a href={layer2 + url3[j]} target="_blank" rel="noreferrer">Level Info</a></p>
-                            <p><a href={layer2 + spells[j]} target="_blank" rel="noreferrer">Spell Info</a></p>
-                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                            <p><a href={layer2 + url3[j]} target="_blank" rel="noreferrer" className="siteLink">Level Info</a></p>
+                            <p><a href={layer2 + spells[j]} target="_blank" rel="noreferrer" className="siteLink">Spell Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a></p>
                         </div>
                     )
                 }
@@ -108,8 +108,8 @@ async function stage2(url2){
                             <h3>{subArr[j]}</h3>
                             <p>{`Hit Die ${hitDie[j]}`}</p>
                             <p>{`Saving Thorws: ${savingThrows[j][0].name} and ${savingThrows[j][1].name}`}</p>
-                            <p><a href={layer2 + url3[j]} target="_blank" rel="noreferrer">Level Info</a></p>
-                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                            <p><a href={layer2 + url3[j]} target="_blank" rel="noreferrer" className="siteLink">Level Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a></p>
                         </div>
                     )
                 }
@@ -122,7 +122,7 @@ async function stage2(url2){
                             <p>{`Speed ${raceSpeed[j]}`}</p>
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} ${abilityBonus[j][1].ability_score.name}: ${abilityBonus[j][1].bonus} `}</p>
                             <p>{raceAlignemt[j]}</p>
-                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a></p>
                         </div>
                     )
                 }
@@ -133,7 +133,7 @@ async function stage2(url2){
                             <p>{`Speed ${raceSpeed[j]}`}</p>
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
                             <p>{raceAlignemt[j]}</p>
-                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a></p>
                         </div>
                     )
                 }
@@ -145,7 +145,7 @@ async function stage2(url2){
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} ${abilityBonus[j][1].ability_score.name}: ${abilityBonus[j][1].bonus} ${abilityBonus[j][2].ability_score.name}: ${abilityBonus[j][2].bonus}`}</p>
                             <p>{` ${abilityBonus[j][3].ability_score.name}: ${abilityBonus[j][3].bonus} ${abilityBonus[j][4].ability_score.name}: ${abilityBonus[j][4].bonus} ${abilityBonus[j][5].ability_score.name}: ${abilityBonus[j][5].bonus}`}</p>
                             <p>{raceAlignemt[j]}</p>
-                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a></p>
                         </div>
                     )
                 }
@@ -157,7 +157,7 @@ async function stage2(url2){
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
                             <p>{`Choose 2 ---${abilityBonusOptions[j].from[0].ability_score.name}:${abilityBonusOptions[j].from[0].bonus} ${abilityBonusOptions[j].from[1].ability_score.name}:${abilityBonusOptions[j].from[1].bonus} ${abilityBonusOptions[j].from[2].ability_score.name}:${abilityBonusOptions[j].from[2].bonus} ${abilityBonusOptions[j].from[3].ability_score.name}:${abilityBonusOptions[j].from[3].bonus} ${abilityBonusOptions[j].from[4].ability_score.name}:${abilityBonusOptions[j].from[4].bonus}`}</p>
                             <p>{raceAlignemt[j]}</p>
-                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a></p>
                         </div>
 
                     )
@@ -168,7 +168,7 @@ async function stage2(url2){
                             <h3>{subArr[j]}</h3>
                             <p>{`Ability Bonuses ${abilityBonus[j][0].ability_score.name}: ${abilityBonus[j][0].bonus} `}</p>
                             <p>{desc[j]}</p>
-                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a></p>
+                            <p> <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a></p>
                         </div>
                     )
                 }
@@ -180,7 +180,7 @@ async function stage2(url2){
                         <div key={j = j+1} className="results">
                             <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
-                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                         </div>
                     )
                 }
@@ -190,7 +190,7 @@ async function stage2(url2){
                             <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <p>{`Skills: ${skills[j][0].name}`}</p>
-                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                         </div>
                     )
                 }
@@ -200,7 +200,7 @@ async function stage2(url2){
                             <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}`}</p>
-                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                         </div>
                     )
                 }
@@ -210,7 +210,7 @@ async function stage2(url2){
                             <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}| ${skills[j][3].name}`}</p>
-                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                         </div>
                     )
                 }
@@ -220,7 +220,7 @@ async function stage2(url2){
                             <h3>{subArr[j]}</h3>
                             <p>{desc[j]}</p>
                             <p>{`Skills: ${skills[j][0].name}| ${skills[j][1].name}| ${skills[j][2].name}| ${skills[j][3].name}| ${skills[j][4].name}`}</p>
-                            <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                            <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                         </div>
                     )
                 }
@@ -233,7 +233,7 @@ async function stage2(url2){
                         <p>{`Typical speakers: ${typicalSpeaker[j]}`}</p>
                         <p>{`Script: ${script[j]}`}</p>
                         <p>{desc[j]}</p>
-                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                     </div>
                 )
             }
@@ -249,7 +249,7 @@ async function stage2(url2){
                     <p>{`Ritual: ${ritual[j]}`}</p>
                     <p>{`Materials: ${material[j]}`}</p>
                     <p>{desc[j]}</p>
-                    <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                    <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                 </div>
                 )
             }
@@ -261,7 +261,7 @@ async function stage2(url2){
                         <p>{`Weight: ${weight[j]}`}</p>
                         <p>{`Cost ${cost[j].quantity} in ${cost[j].unit}`}</p>
                         <p>{desc[j]}</p>
-                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                     </div>
                 )
             }
@@ -271,7 +271,7 @@ async function stage2(url2){
                         <h3>{subArr[j]}</h3>
                         <p>{`Category: ${equipmentCategory[j].name}`}</p>
                         <p>{desc[j]}</p>
-                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                     </div>
                 )
             }
@@ -282,7 +282,7 @@ async function stage2(url2){
                         <p>{`Level: ${spellLevel[j]}`}</p>
                         <p>{`Class ${featuresClass[j].name}`}</p>
                         <p>{desc[j]}</p>
-                        <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                        <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                     </div>
                 )
             }
@@ -291,7 +291,7 @@ async function stage2(url2){
                 <div key={j = j+1} className="results">
                     <p>{subArr[j]}</p>
                     <p>{desc[j]}</p>
-                    <a href={subArr2[j]} target="_blank" rel="noreferrer">More Info</a>
+                    <a href={subArr2[j]} target="_blank" rel="noreferrer" className="siteLink">More Info</a>
                 </div>
             )
             
@@ -368,7 +368,7 @@ export default function DisplayTool({ url, wait }) {
     
     const [state, setState] = useState([])
     useEffect(() => {
-        setState('Rummaging through bag of holding...')
+        setState(<p className="loading">Rummaging through bag of holding...</p>)
         setTimeout(() => {
             setState(mainArr);
         }, wait);
@@ -376,8 +376,10 @@ export default function DisplayTool({ url, wait }) {
    
 
     return (
+        
         <div className="wholeResults">
             {state}
         </div>
+        
     );
 }

@@ -8,7 +8,7 @@ export default function Magic() {
                 <Link to={'/magic/spells'} className="char" >Spells</Link>
                 <Link to={'/magic/schools'} className="char" >Magic Schools</Link>
             </div>
-            <p>Please select a category for me to search for</p>
+            <p className="select">Please select a category for me to search for</p>
         </div>
     );
 }

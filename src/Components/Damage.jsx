@@ -8,7 +8,7 @@ function Damage({ url }) {
                 <Link to={'/damage/types'} className="char" >Damage Types</Link>
                 <Link to={'/damage/conditions'} className="char" >Damage Conditions</Link>
             </div>
-            <p>Please select a category for me to search for</p>
+            <p className="select">Please select a category for me to search for</p>
         </div>
     );
 }
