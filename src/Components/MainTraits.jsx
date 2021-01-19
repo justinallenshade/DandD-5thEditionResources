@@ -6,7 +6,7 @@ export default function MainTraits({ url }) {
     return (
         <div>
             <h1>Traits</h1>
-            <DisplayTool url={url+"traits"} wait={900}/>
+            <DisplayTool url={url+"traits"} wait={1000}/>
         </div>
     );
 }

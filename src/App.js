@@ -52,7 +52,7 @@ export default function App() {
   return (
     <div className="App">
         <div>
-            <h1>D and D 5th edition resources</h1>
+            <h1  className="text">D and D 5th edition resources</h1>
             <Header />
             <Route path="/" exact render={() => <Home url={url} />} /> 
 

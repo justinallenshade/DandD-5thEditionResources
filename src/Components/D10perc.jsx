@@ -18,7 +18,9 @@ export default function DieCalc() {
             <h1>D10%</h1>
             <h2 className="dieDisplay">{dieState}</h2>
             <h3 className="dieDisplay">{`Roll: ${countState}`}</h3>
-            <button className="dieButton" onClick={rollDice}>Roll Die</button>
+            <div  className="text">
+                <button className="dieButton" onClick={rollDice}>Roll Die</button>
+            </div>
         </div>
     );
 }

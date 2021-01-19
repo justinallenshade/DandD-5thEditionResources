@@ -24,7 +24,6 @@ body{
 }
 
 .App {
-  text-align: center;
   background-color: rgba(255, 255, 255, 0.24);
   color: rgb(31, 9, 9);
 }
@@ -35,7 +34,7 @@ body{
   justify-content: space-around;
   background-color: rgba(228, 228, 228, 0.459);
   height: 20%;
-
+  padding-top: .5%;
 }
 
 .tabs{
@@ -115,4 +114,9 @@ body{
   border-radius: 50% 50% 50% 50%;
   font-size: 150%;
   outline-style: none;
+}
+
+.text, .select, .dieDisplay, p, h3, h1, .siteLink{
+  display: flex;
+  justify-content: space-around;
 }
