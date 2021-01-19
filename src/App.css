@@ -13,14 +13,24 @@
   100% {text-shadow: 0px 0px 5px rgb(255, 0, 0); border-top-color: rgba(255, 0, 0, 0.459); border-right-color: rgba(0, 128, 0, 0.479); border-bottom-color: rgba(0, 0, 255, 0.452); border-left-color: rgba(255, 0, 255, 0.507);} 
 }
 @keyframes animateBackground{
-  0% {background-color: rgba(0, 0, 0, 0.698);}
-  50% {background-color: rgba(105, 105, 105, 0.835);}
-  100% {background-color: rgba(0, 0, 0, 0.698);}
+  0% {background-color: rgba(0, 0, 0, 0.801);}
+  50% {background-color: rgba(0, 0, 0, 0.897);}
+  100% {background-color: rgba(0, 0, 0, 0.726);}
+}
+@keyframes animateResults{
+  0% {box-shadow: 0px 0px 7px inset rgb(255, 230, 0);}
+  25% {box-shadow: 0px 0px 7px inset  rgb(174, 0, 255);}
+  50% {box-shadow: 0px 0px 7px inset  rgb(133, 1, 1);}
+  75% {box-shadow: 0px 0px 7px inset  rgb(255, 0, 212);}
+  100% {box-shadow: 0px 0px 7px inset  rgb(255, 230, 0);}
 }
 
 body{
+  background-image: url(https://i.pinimg.com/originals/3e/dc/50/3edc502067bc0f4590722aa6e8c59b6d.jpg);
+  background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.698);
   animation: animateBackground 10s linear 0s infinite;
+  font-family: 'Rakkas', cursive;
 }
 
 .App {
@@ -76,18 +86,21 @@ body{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
   padding-bottom: 5%;
   padding-top: 2%;
   height: 100%;
 }
 
 .results{
-  border: solid 5px rgba(0, 0, 0, 0.219);
+  border: solid 5px rgb(228, 228, 228);
   margin: 2px;
   width: 20%;
-  background-color: white;
+  background-image: repeating-linear-gradient(to bottom left, rgb(112, 112, 112), beige);
   padding-bottom: 2%;
+  border-radius: 2% 2% 2% 2%;
+  padding: 1%;
+  animation: animateResults 10s linear 0s infinite;
 }
 
 .loading{

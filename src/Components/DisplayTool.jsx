@@ -310,7 +310,6 @@ async function urlCall(url){
     .then(res => res.json())
     .then(res => {
         let arrMain = res.results
-
         let k=0;
         arrName = arrMain.map(i => { 
             return(
@@ -326,12 +325,9 @@ async function urlCall(url){
             <p>{`An Ancient Red Dragon aproaches: ${err}`}</p>
         </div>
     )})
-
-    urlCondition = url
 }
 
 export default function DisplayTool({ url, wait }) {
-
     if(urlCondition === 0 || urlCondition !== url){
         urlCall(url);
         subArr=[]
@@ -364,6 +360,7 @@ export default function DisplayTool({ url, wait }) {
         equipmentCategory =[]
         weight = []
         featuresClass =[]
+        urlCondition = url
     }
     
     const [state, setState] = useState([])
