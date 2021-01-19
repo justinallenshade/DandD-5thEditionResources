@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Character() {
-   
     return (
-
         <div>
             <div className="charWhole">
                 <Link to={'/character/classes'} className="char" >Classes</Link>
@@ -13,7 +11,7 @@ export default function Character() {
                 <Link to={'/character/score'} className="char" >Ability Scores</Link>
                 <Link to={'/character/languages'} className="char" >Languages</Link>
             </div>
+            <p>Please select a category for me to search for</p>
         </div>
-      
     );
 }

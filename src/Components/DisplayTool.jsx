@@ -297,7 +297,11 @@ async function stage2(url2){
             
         })
     })
-
+    .catch(err => {return(
+        <div>
+            <p>{`You cast wish and it fails: ${err}`}</p>
+        </div>
+    )})
     
 }
 
@@ -317,7 +321,11 @@ async function urlCall(url){
         });
     })
    
-    .catch(err => console.log(`Your spell fizzled out!- ${err}`))
+    .catch(err => {return(
+        <div>
+            <p>{`An Ancient Red Dragon aproaches: ${err}`}</p>
+        </div>
+    )})
 
     urlCondition = url
 }
@@ -360,6 +368,7 @@ export default function DisplayTool({ url, wait }) {
     
     const [state, setState] = useState([])
     useEffect(() => {
+        setState('Rummaging through bag of holding...')
         setTimeout(() => {
             setState(mainArr);
         }, wait);

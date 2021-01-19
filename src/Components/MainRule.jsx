@@ -8,6 +8,7 @@ export default function MainRule() {
                 <Link to={'/mainrule/rulesection'} className="char" >Rule Section</Link>
                 <Link to={'/mainrule/features'} className="char" >Features</Link>
             </div>
+            <p>Please select a category for me to search for</p>
         </div>
     );
 }

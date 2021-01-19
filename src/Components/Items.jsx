@@ -10,6 +10,7 @@ export default function Items() {
                 <Link to={'/items/equipment'} className="char" >Equipment</Link>
                 <Link to={'/items/magicitems/'} className="char" >Magic Items</Link>
             </div>
+            <p>Please select a category for me to search for</p>
         </div>
         
     );
