@@ -325,7 +325,6 @@ async function urlCall(url){
 export default function DisplayTool({ url, wait }) {
 
     if(urlCondition === 0 || urlCondition !== url){
-        console.log(`conditional ran`)
         urlCall(url);
         subArr=[]
         subArr2=[]

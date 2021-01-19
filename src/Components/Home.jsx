@@ -1,11 +1,16 @@
 import React from 'react';
+import DiceNav from './DiceNav'
 
 export default function Home() {
     
     return (
         <div>
-            <h1>Homepage</h1>
-            <p> Dice goes here</p>
+            <DiceNav />
+            <h1>Welcome Adventurers!!</h1>
+            <p>This is a collection of information that I have gathered along my travels.
+                Please use it if you would like. Oh! I should also tell you to be careful,
+                as the information is in my bag of holding and can take some time to retrieve. 
+            </p>
         </div>
     );
 }

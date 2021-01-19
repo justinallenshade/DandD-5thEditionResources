@@ -36,12 +36,13 @@ import MainRule from './Components/MainRule'
 import RuleSection from './Components/RuleSection'
 import Features from './Components/Features'
 
-
-// import DisplayTool from './Components/DisplayTool';
-
-
-
-
+import D4 from './Components/D4'
+import D6 from './Components/D6'
+import D8 from './Components/D8'
+import D10 from './Components/D10'
+import D10perc from './Components/D10perc'
+import D12 from './Components/D12'
+import D20 from './Components/D20'
 
 
 export default function App() {
@@ -87,7 +88,14 @@ export default function App() {
             <Route path="/mainrule/rulesection" exact render={() => <RuleSection url={url}/>} />
             <Route path="/mainrule/features" exact render={() => <Features url={url}/>} />
             
-           
+            <Route path="/die/d4" exact render={() => <D4 url={url} />} /> 
+            <Route path="/die/d6" exact render={() => <D6 url={url} />} /> 
+            <Route path="/die/d8" exact render={() => <D8 url={url} />} /> 
+            <Route path="/die/d10" exact render={() => <D10 url={url} />} /> 
+            <Route path="/die/d10perc" exact render={() => <D10perc url={url} />} /> 
+            <Route path="/die/d12" exact render={() => <D12 url={url} />} /> 
+            <Route path="/die/d20" exact render={() => <D20 url={url} />} /> 
+            
         </div>
     </div>
   );
