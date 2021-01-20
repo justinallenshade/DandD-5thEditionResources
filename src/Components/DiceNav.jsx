@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 export default function DiceNav() {
+    // creates the nav bare for the home and dice sections
     return (
         <div>
             <div className="header">

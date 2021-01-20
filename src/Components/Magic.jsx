@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 export default function Magic() {
+    // creates the nave bar for the Magic component
     return (
         <div>
             <div className="charWhole">

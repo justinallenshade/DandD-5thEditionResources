@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
+    // creates the links to the main header
     return (
         <div className="header">
             

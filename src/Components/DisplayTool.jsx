@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
+
+// creates the global variables to store the unformation so it can be reset later on outside of the 
+// main function that they were used in.
 let arrName = [];
-
-
 let urlCondition = 0;
 let layer2 = "https://www.dnd5eapi.co"
-
 
 let subArr = []
 let subArr2=[]
@@ -37,6 +37,7 @@ let equipmentCategory =[]
 let weight = []
 let featuresClass =[]
 
+// takes the undividual results url and pulls/returns the unformation within the API call
 let mainArr = []
 async function stage2(url2){
     let call2 = layer2 + url2;
@@ -44,6 +45,7 @@ async function stage2(url2){
     await fetch(call2)
     .then(res => res.json())
     .then(res => {
+        // oushes needed results into the coresponding array.
         subArr.push(res.name)
         subArr2.push(layer2 + res.url)
         subArr3.push(res.challenge_rating)
@@ -75,7 +77,7 @@ async function stage2(url2){
         weight.push(res.weight)
         featuresClass.push(res.class)
 
-        
+        // maps through each element, testing the arrays index value and returning the coresponding information
         let j =0;
         mainArr = arrName.map(i => {
             if(subArr3[j] !== undefined){
@@ -305,6 +307,7 @@ async function stage2(url2){
     
 }
 
+// pulls out the individual items url and passes it to the stage2
 async function urlCall(url){
     await fetch(url)
     .then(res => res.json())
@@ -327,8 +330,12 @@ async function urlCall(url){
     )})
 }
 
+// resets the global variable to be used later, tests to see if the url is either the starting 
+// or from a new component.
 export default function DisplayTool({ url, wait }) {
     if(urlCondition === 0 || urlCondition !== url){
+        // passes the url into the url call function, starting the breakdown of the elements of the API
+        // also resets the global variables so they can work on each individual call
         urlCall(url);
         subArr=[]
         subArr2=[]
@@ -363,6 +370,7 @@ export default function DisplayTool({ url, wait }) {
         urlCondition = url
     }
     
+    // sets the display after all api data has been grabbed and returned
     const [state, setState] = useState([])
     useEffect(() => {
         setState(<p className="loading">Rummaging through bag of holding...</p>)
@@ -371,9 +379,8 @@ export default function DisplayTool({ url, wait }) {
         }, wait);
     },[wait]);
    
-
+    // updates the elements on page by state
     return (
-        
         <div className="wholeResults">
             {state}
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 export default function Traits() {
+    // creates the nav bar for the Traits section
     return (
         <div>
             <div className="charWhole">

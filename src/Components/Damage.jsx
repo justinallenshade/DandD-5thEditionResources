@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 function Damage({ url }) {
+    // creates a nav bar for the Damage section
     return (
         <div>
             <div className="charWhole">

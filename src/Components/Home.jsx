@@ -2,7 +2,7 @@ import React from 'react';
 import DiceNav from './DiceNav'
 
 export default function Home() {
-    
+     // displays the title of the tab along with the starting information
     return (
         <div>
             <DiceNav />

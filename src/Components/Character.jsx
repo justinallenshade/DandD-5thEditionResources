@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Character() {
+    // creates a nav bar or the characters section
     return (
         <div>
             <div className="charWhole">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export default function Items() {
     return (
-        
+        // creates the nav bar for the Items section
         <div>
             <div className="charWhole">
                 <Link to={'/items/equipment'} className="char" >Equipment</Link>
