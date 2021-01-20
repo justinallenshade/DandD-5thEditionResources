@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+D&D 5th edition site<br/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description<br/>
 
-## Available Scripts
+I want to build a D&D search database using the D&D api. Essentially where you can search everything about a class/attack/monster and pull the relevant information from the api. This way during games you can quickly reference the site to find out an attack or what a spell does. Stretch goal would be a character/monster save/favorites, where you can grab different monsters/attacks or classes and compare them to each other. To help a dungeon master keep tabs on enemies or characters with spells. As well as a dice page so you can roll a random number in case someone forgot a die of some kind.<br/>
 
-In the project directory, you can run:
+Wireframe <br/>
 
-### `npm start`
+User Stories<br/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+As a beginner I want to be able to not be overwhelmed with information and for it be easily sorted and categorized. <br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+As an intermediate player I want a reference for monsters and spells that I encounter, with ways to keep track of them for future reference.<br/>
 
-### `npm test`
+As an experienced player I want to be able to keep track of my character stats and information.<br/>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As a dungeon master I want to be able to search through monsters and save them for future plans. <br/>
+API used<br/>
+http://www.dnd5eapi.co/<br/>
 
-### `npm run build`
+API example<br/>
+https://www.dnd5eapi.co/api/classes/bard<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Component hierarchy <br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
