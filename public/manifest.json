@@ -3,9 +3,9 @@
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "48x48",
-      "type": "ico"
+      "src": "favicon-32x32.png",
+      "sizes": "38x38",
+      "type": "png"
     },
     {
       "src": "apple-touch-icon.png",
