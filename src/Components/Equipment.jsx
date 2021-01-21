@@ -7,7 +7,7 @@ export default function Equipment ({ url }) {
     return (
         <div>
             <h1>Equipment</h1>
-            <DisplayTool url={url+"equipment"} wait={5000}/>
+            <DisplayTool url={url+"equipment"} wait={7000}/>
         </div>
     );
 }
