@@ -7,7 +7,7 @@ export default function Types({ url }) {
         <div>
             <div>
                 <h1>Damage Types</h1>
-                <DisplayTool url={url + ["damage-types"]} wait={500}/>
+                <DisplayTool url={url + ["damage-types"]} wait={1000}/>
             </div>
         </div>
     );
