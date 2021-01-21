@@ -6,7 +6,7 @@ export default function Conditions({ url }) {
          // displays the title of the tab and passes the url into the display component
         <div>
             <h1>Conditions</h1>
-            <DisplayTool url={url + "conditions"} wait={600}/>
+            <DisplayTool url={url + "conditions"} wait={1000}/>
         </div>
     );
 }
